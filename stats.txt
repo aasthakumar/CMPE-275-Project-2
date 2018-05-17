@@ -1,0 +1,7 @@
+ sysctl -n hw.ncpu
+ 
+ results =  multiprocessing.Pool(processes=12).map(process_line, source_file, 12)
+ par --- time:7.3111
+
+ results =  multiprocessing.Pool(processes=2).map(process_line, source_file, 2)
+ par --- time:7.9590
